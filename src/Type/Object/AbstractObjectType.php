@@ -10,12 +10,6 @@
  */
 
 declare(strict_types=1);
-/*
- * This file is a part of graphql-youshido project.
- *
- * @author Alexandr Viniychuk <a@viniychuk.com>
- * created: 12/2/15 8:57 PM
- */
 
 namespace Youshido\GraphQL\Type\Object;
 

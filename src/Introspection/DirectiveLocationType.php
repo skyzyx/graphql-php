@@ -10,9 +10,6 @@
  */
 
 declare(strict_types=1);
-/**
- * Date: 3/24/17.
- */
 
 namespace Youshido\GraphQL\Introspection;
 

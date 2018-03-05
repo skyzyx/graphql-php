@@ -10,12 +10,6 @@
  */
 
 declare(strict_types=1);
-/*
- * This file is a part of graphql-youshido project.
- *
- * @author Alexandr Viniychuk <a@viniychuk.com>
- * created: 11/28/15 3:53 PM
- */
 
 namespace Youshido\GraphQL\Config\Schema;
 

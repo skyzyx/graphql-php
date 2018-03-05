@@ -10,12 +10,6 @@
  */
 
 declare(strict_types=1);
-/*
- * This file is a part of GraphQL project.
- *
- * @author Alexandr Viniychuk <a@viniychuk.com>
- * created: 12/6/15 11:15 PM
- */
 
 namespace Youshido\Tests\StarWars\Schema;
 

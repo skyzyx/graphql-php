@@ -10,9 +10,6 @@
  */
 
 declare(strict_types=1);
-/**
- * This file is a part of PhpStorm project.
- */
 
 namespace Youshido\GraphQL\Type;
 

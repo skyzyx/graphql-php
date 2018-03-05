@@ -10,9 +10,6 @@
  */
 
 declare(strict_types=1);
-/**
- * Date: 17.12.15.
- */
 
 namespace Youshido\GraphQL\Config;
 

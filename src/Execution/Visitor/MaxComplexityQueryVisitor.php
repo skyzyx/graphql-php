@@ -10,20 +10,17 @@
  */
 
 declare(strict_types=1);
-/*
- * Concrete implementation of query visitor.
- *
- * Enforces maximum complexity on a query, computed from "cost" functions on
- * the fields touched by that query.
- *
- * @author Ben Roberts <bjr.roberts@gmail.com>
- * created: 7/11/16 11:05 AM
- */
 
 namespace Youshido\GraphQL\Execution\Visitor;
 
 use Youshido\GraphQL\Config\Field\FieldConfig;
 
+/**
+ * Concrete implementation of query visitor.
+ *
+ * Enforces maximum complexity on a query, computed from "cost" functions on
+ * the fields touched by that query.
+ */
 class MaxComplexityQueryVisitor extends AbstractQueryVisitor
 {
     /**

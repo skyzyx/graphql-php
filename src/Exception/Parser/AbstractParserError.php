@@ -10,16 +10,14 @@
  */
 
 declare(strict_types=1);
-/**
- * Date: 16.11.16.
- */
 
 namespace Youshido\GraphQL\Exception\Parser;
 
+use Exception;
 use Youshido\GraphQL\Exception\Interfaces\LocationableExceptionInterface;
 use Youshido\GraphQL\Parser\Location;
 
-abstract class AbstractParserError extends \Exception implements LocationableExceptionInterface
+abstract class AbstractParserError extends Exception implements LocationableExceptionInterface
 {
     /** @var Location */
     private $location;

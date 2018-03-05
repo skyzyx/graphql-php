@@ -10,9 +10,6 @@
  */
 
 declare(strict_types=1);
-/**
- * Date: 27.10.16.
- */
 
 namespace Youshido\Tests\Library\Validator;
 

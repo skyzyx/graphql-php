@@ -10,15 +10,13 @@
  */
 
 declare(strict_types=1);
-/**
- * Date: 22.12.15.
- */
 
 namespace Youshido\GraphQL\Exception;
 
+use Exception;
 use Youshido\GraphQL\Exception\Interfaces\DatableExceptionInterface;
 
-class DatableResolveException extends \Exception implements DatableExceptionInterface
+class DatableResolveException extends Exception implements DatableExceptionInterface
 {
     /** @var array */
     protected $data;

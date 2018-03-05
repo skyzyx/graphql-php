@@ -10,9 +10,6 @@
  */
 
 declare(strict_types=1);
-/**
- * Date: 14.01.16.
- */
 
 namespace Youshido\GraphQL\Type\Object;
 

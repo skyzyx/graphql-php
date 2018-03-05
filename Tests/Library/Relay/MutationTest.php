@@ -10,12 +10,6 @@
  */
 
 declare(strict_types=1);
-/*
- * This file is a part of GraphQL project.
- *
- * @author Alexandr Viniychuk <a@viniychuk.com>
- * created: 2:11 PM 5/19/16
- */
 
 namespace Youshido\Tests\Library\Relay;
 

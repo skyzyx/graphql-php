@@ -10,15 +10,11 @@
  */
 
 declare(strict_types=1);
-/*
- * This file is a part of graphql-youshido project.
- *
- * @author Alexandr Viniychuk <a@viniychuk.com>
- * created: 11/27/15 2:28 AM
- */
 
 namespace Youshido\GraphQL\Exception;
 
-class ConfigurationException extends \Exception
+use Exception;
+
+class ConfigurationException extends Exception
 {
 }

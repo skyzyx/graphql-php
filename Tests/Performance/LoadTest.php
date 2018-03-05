@@ -10,12 +10,6 @@
  */
 
 declare(strict_types=1);
-/**
- * Created by PhpStorm.
- * User: mounter
- * Date: 8/18/16
- * Time: 2:17 PM.
- */
 
 namespace Youshido\Tests\Performance;
 

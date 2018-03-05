@@ -10,6 +10,11 @@
  */
 
 declare(strict_types=1);
+
+namespace Youshido\GraphQL\Execution\Visitor;
+
+use Youshido\GraphQL\Config\Field\FieldConfig;
+
 /**
  * Abstract query visitor.
  *
@@ -30,11 +35,6 @@ declare(strict_types=1);
  * Implementations are able to "reduce" the query by mutating $this->memo.  A reasonable thing to do is raise an
  * exception if some limit is reached.  (see MaxComplexityQueryVisitor for example concrete implementation)
  */
-
-namespace Youshido\GraphQL\Execution\Visitor;
-
-use Youshido\GraphQL\Config\Field\FieldConfig;
-
 abstract class AbstractQueryVisitor
 {
     /**
