@@ -46,7 +46,7 @@ class Tokenizer
 
     protected function skipWhitespace(): void
     {
-        while ($this->pos < \mb_strlen($this->source)) {
+        while ($this->pos < \mb_strlen((string) $this->source)) {
             $ch = $this->source[$this->pos];
 
             if (' ' === $ch || "\t" === $ch || ',' === $ch) {
@@ -58,7 +58,7 @@ class Tokenizer
             if ('#' === $ch) {
                 $this->pos++;
 
-                while ($this->pos < \mb_strlen($this->source) && ($code = \ord($this->source[$this->pos])) && 10 !== $code && 13 !== $code && 0x2028 !== $code && 0x2029 !== $code
+                while ($this->pos < \mb_strlen((string) $this->source) && ($code = \ord($this->source[$this->pos])) && 10 !== $code && 13 !== $code && 0x2028 !== $code && 0x2029 !== $code
                 ) {
                     $this->pos++;
                 }
@@ -97,7 +97,7 @@ class Tokenizer
      */
     protected function scan()
     {
-        if ($this->pos >= \mb_strlen($this->source)) {
+        if ($this->pos >= \mb_strlen((string) $this->source)) {
             return new Token(Token::TYPE_END, $this->getLine(), $this->getColumn());
         }
 
@@ -199,7 +199,7 @@ class Tokenizer
         $start = $this->pos;
         $this->pos++;
 
-        while ($this->pos < \mb_strlen($this->source)) {
+        while ($this->pos < \mb_strlen((string) $this->source)) {
             $ch = $this->source[$this->pos];
 
             if ('_' === $ch || '$' === $ch || ($ch >= 'a' && $ch <= 'z') || ($ch >= 'A' && $ch <= 'Z') || ($ch >= '0' && $ch <= '9')) {
@@ -286,7 +286,7 @@ class Tokenizer
 
     protected function skipInteger(): void
     {
-        while ($this->pos < \mb_strlen($this->source)) {
+        while ($this->pos < \mb_strlen((string) $this->source)) {
             $ch = $this->source[$this->pos];
 
             if ($ch >= '0' && $ch <= '9') {
@@ -324,7 +324,7 @@ class Tokenizer
      */
     protected function scanString()
     {
-        $len = \mb_strlen($this->source);
+        $len = \mb_strlen((string) $this->source);
         $this->pos++;
 
         $value = '';

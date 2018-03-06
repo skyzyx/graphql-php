@@ -68,7 +68,7 @@ class ArrayConnection
     public static function cursorToKey($cursor)
     {
         if ($decoded = \base64_decode($cursor, true)) {
-            return \mb_substr($decoded, \mb_strlen(self::PREFIX));
+            return \mb_substr($decoded, \mb_strlen((string) self::PREFIX));
         }
     }
 
