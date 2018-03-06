@@ -11,6 +11,7 @@
 
 declare(strict_types=1);
 
+
 namespace Youshido\Tests\Library\Relay;
 
 use Youshido\GraphQL\Relay\RelayMutation;

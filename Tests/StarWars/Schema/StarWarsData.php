@@ -107,6 +107,7 @@ class StarWarsData
     }
 
     private static function vader()
+<<<<<<< HEAD
     {
         return [
             'id'         => '1001',
@@ -130,6 +131,31 @@ class StarWarsData
     private static function leia()
     {
         return [
+=======
+    {
+        return [
+            'id'         => '1001',
+            'name'       => 'Darth Vader',
+            'friends'    => ['1004'],
+            'appearsIn'  => [4, 5, 6],
+            'homePlanet' => 'Tatooine',
+        ];
+    }
+
+    private static function han()
+    {
+        return [
+            'id'        => '1002',
+            'name'      => 'Han Solo',
+            'friends'   => ['1000', '1003', '2001'],
+            'appearsIn' => [4, 5, 6],
+        ];
+    }
+
+    private static function leia()
+    {
+        return [
+>>>>>>> master
             'id'         => '1003',
             'name'       => 'Leia Organa',
             'friends'    => ['1000', '1002', '2000', '2001'],
