@@ -10,9 +10,6 @@
  */
 
 declare(strict_types=1);
-/**
- * Date: 16.05.16.
- */
 
 namespace Youshido\GraphQL\Introspection\Field;
 

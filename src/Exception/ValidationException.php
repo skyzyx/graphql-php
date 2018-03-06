@@ -10,12 +10,11 @@
  */
 
 declare(strict_types=1);
-/**
- * Date: 25.11.15.
- */
 
 namespace Youshido\GraphQL\Exception;
 
-class ValidationException extends \Exception
+use Exception;
+
+class ValidationException extends Exception
 {
 }

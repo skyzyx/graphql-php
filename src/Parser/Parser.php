@@ -10,12 +10,6 @@
  */
 
 declare(strict_types=1);
-/*
- * This file is a part of graphql-youshido project.
- *
- * @author Portey Vasil <portey@gmail.com>
- * created: 11/23/15 1:22 AM
- */
 
 namespace Youshido\GraphQL\Parser;
 

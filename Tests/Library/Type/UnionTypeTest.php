@@ -10,9 +10,6 @@
  */
 
 declare(strict_types=1);
-/**
- * Date: 13.05.16.
- */
 
 namespace Youshido\tests\Library\Type;
 

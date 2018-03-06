@@ -10,9 +10,6 @@
  */
 
 declare(strict_types=1);
-/**
- * Date: 01.12.15.
- */
 
 namespace Youshido\Tests\Parser;
 
@@ -72,7 +69,7 @@ class ParserTest extends \PHPUnit_Framework_TestCase
             test {
                 id
                 image {
-                    
+
                 }
             }
         }

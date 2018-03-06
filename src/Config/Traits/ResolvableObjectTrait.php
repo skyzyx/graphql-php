@@ -10,11 +10,6 @@
  */
 
 declare(strict_types=1);
-/*
- * This file is a part of graphql-youshido project.
- *
- * @author Philipp Melab <philipp.melab@gmail.com>
- */
 
 namespace Youshido\GraphQL\Config\Traits;
 

@@ -10,12 +10,6 @@
  */
 
 declare(strict_types=1);
-/*
- * This file is a part of GraphQL project.
- *
- * @author Alexandr Viniychuk <a@viniychuk.com>
- * created: 3:40 PM 4/29/16
- */
 
 namespace Youshido\GraphQL\Type;
 

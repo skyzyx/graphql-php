@@ -10,9 +10,6 @@
  */
 
 declare(strict_types=1);
-/**
- * Date: 10/24/16.
- */
 
 namespace Youshido\GraphQL\Parser\Ast\ArgumentValue;
 

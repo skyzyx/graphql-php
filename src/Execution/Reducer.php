@@ -10,9 +10,6 @@
  */
 
 declare(strict_types=1);
-/**
- * Date: 07.11.16.
- */
 
 namespace Youshido\GraphQL\Execution;
 

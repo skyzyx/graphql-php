@@ -10,9 +10,6 @@
  */
 
 declare(strict_types=1);
-/**
- * Date: 16.11.16.
- */
 
 namespace Youshido\GraphQL\Parser\Ast;
 

@@ -10,9 +10,6 @@
  */
 
 declare(strict_types=1);
-/**
- * Date: 12.05.16.
- */
 
 namespace Youshido\Tests\Library\Type;
 
@@ -29,7 +26,6 @@ class EnumTypeTest extends \PHPUnit_Framework_TestCase
 
         new EnumType([]);
     }
-
 
     public function testInvalidEmptyParams(): void
     {

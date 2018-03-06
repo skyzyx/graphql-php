@@ -15,11 +15,6 @@ namespace Youshido\Tests\Issues\Issue90;
 
 use Youshido\GraphQL\Execution\Processor;
 
-/**
- * User: stefano.corallo
- * Date: 25/11/16
- * Time: 9.39.
- */
 class Issue90Test extends \PHPUnit_Framework_TestCase
 {
     public function testQueryDateTimeTypeWithDateParameter(): void
