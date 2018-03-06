@@ -29,7 +29,7 @@ trait AutoNameTrait
         $className = \get_called_class();
 
         if ($prevPos = \mb_strrpos($className, '\\')) {
-            return \mb_substr($className, $prevPos + 1);
+            $className = \mb_substr($className, $prevPos + 1);
         }
 
         if ('Field' === \mb_substr($className, -5)) {
