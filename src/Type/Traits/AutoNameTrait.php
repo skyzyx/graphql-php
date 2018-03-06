@@ -32,11 +32,11 @@ trait AutoNameTrait
             $className = \mb_substr($className, $prevPos + 1);
         }
 
-        if (\mb_substr($className, -5) == 'Field') {
+        if ('Field' === \mb_substr($className, -5)) {
             return \lcfirst(\mb_substr($className, 0, -5));
         }
 
-        if (\mb_substr($className, -4) == 'Type') {
+        if ('Type' === \mb_substr($className, -4)) {
             return \mb_substr($className, 0, -4);
         }
 
