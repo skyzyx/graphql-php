@@ -88,7 +88,7 @@ class Token
         $this->column = $column;
 
         if ($data) {
-            $tokenLength = \mb_strlen($data);
+            $tokenLength = \mb_strlen((string) $data);
             $tokenLength = $tokenLength > 1 ? $tokenLength - 1 : 0;
 
             $this->column = $column - $tokenLength;
