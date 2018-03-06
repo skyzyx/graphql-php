@@ -26,22 +26,22 @@ trait AutoNameTrait
             return $this->config->getName();
         }
 
-        $className = \get_called_class();
+        $className = get_called_class();
 
-        if ($prevPos = \mb_strrpos($className, '\\')) {
-            return \mb_substr($className, $prevPos + 1);
+        if ($prevPos = strrpos($className, '\\')) {
+            $className = substr($className, $prevPos + 1);
         }
 
-        if ('Field' === \mb_substr($className, -5)) {
-            return \lcfirst(\mb_substr($className, 0, -5));
+        if (substr($className, -5) == 'Field') {
+            return lcfirst(substr($className, 0, -5));
         }
 
-        if ('Type' === \mb_substr($className, -4)) {
-            return \mb_substr($className, 0, -4);
+        if (substr($className, -4) == 'Type') {
+            return substr($className, 0, -4);
         }
 
         if ($this instanceof FieldInterface) {
-            return \lcfirst($className);
+            return lcfirst($className);
         }
 
         return $className;
