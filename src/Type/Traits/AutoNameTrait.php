@@ -28,16 +28,16 @@ trait AutoNameTrait
 
         $className = \get_called_class();
 
-        if ($prevPos = \strrpos($className, '\\')) {
-            $className = \substr($className, $prevPos + 1);
+        if ($prevPos = \mb_strrpos($className, '\\')) {
+            $className = \mb_substr($className, $prevPos + 1);
         }
 
-        if (\substr($className, -5) == 'Field') {
-            return \lcfirst(\substr($className, 0, -5));
+        if (\mb_substr($className, -5) == 'Field') {
+            return \lcfirst(\mb_substr($className, 0, -5));
         }
 
-        if (\substr($className, -4) == 'Type') {
-            return \substr($className, 0, -4);
+        if (\mb_substr($className, -4) == 'Type') {
+            return \mb_substr($className, 0, -4);
         }
 
         if ($this instanceof FieldInterface) {
