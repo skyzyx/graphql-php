@@ -46,33 +46,33 @@ class Request
 
     public function __construct($data = [], $variables = [])
     {
-        if (\array_key_exists('queries', $data)) {
+        if (isset($data['queries'])) {
             $this->addQueries($data['queries']);
         }
 
-        if (\array_key_exists('mutations', $data)) {
+        if (isset($data['mutations'])) {
             $this->addMutations($data['mutations']);
         }
 
-        if (\array_key_exists('fragments', $data)) {
+        if (isset($data['fragments'])) {
             $this->addFragments($data['fragments']);
         }
 
-        if (\array_key_exists('fragmentReferences', $data)) {
+        if (isset($data['fragmentReferences'])) {
             $this->addFragmentReferences($data['fragmentReferences']);
         }
 
-        if (\array_key_exists('variables', $data)) {
+        if (isset($data['variables'])) {
             $this->addQueryVariables($data['variables']);
         }
 
-        if (\array_key_exists('variableReferences', $data)) {
+        if (isset($data['variableReferences'])) {
             foreach ($data['variableReferences'] as $ref) {
-                if (!\array_key_exists($ref->getName(), $variables)) {
+                if (!isset($variables[$ref->getName()])) {
                     /** @var Variable $variable */
                     $variable = $ref->getVariable();
 
-                    if ($variable->hasDefaultValue()) {
+                    if (isset($variable) && $variable->hasDefaultValue()) {
                         $variables[$variable->getName()] = $variable->getDefaultValue()->getValue();
 
                         continue;
