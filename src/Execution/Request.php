@@ -46,39 +46,36 @@ class Request
 
     public function __construct($data = [], $variables = [])
     {
-        if (isset($data['queries'])) {
+        if (array_key_exists('queries', $data)) {
             $this->addQueries($data['queries']);
         }
 
-        if (isset($data['mutations'])) {
+        if (array_key_exists('mutations', $data)) {
             $this->addMutations($data['mutations']);
         }
 
-        if (isset($data['fragments'])) {
+        if (array_key_exists('fragments', $data)) {
             $this->addFragments($data['fragments']);
         }
 
-        if (isset($data['fragmentReferences'])) {
+        if (array_key_exists('fragmentReferences', $data)) {
             $this->addFragmentReferences($data['fragmentReferences']);
         }
 
-        if (isset($data['variables'])) {
+        if (array_key_exists('variables', $data)) {
             $this->addQueryVariables($data['variables']);
         }
 
-        if (isset($data['variableReferences'])) {
+        if (array_key_exists('variableReferences', $data)) {
             foreach ($data['variableReferences'] as $ref) {
-                if (!isset($variables[$ref->getName()])) {
+                if (!array_key_exists($ref->getName(), $variables)) {
                     /** @var Variable $variable */
                     $variable = $ref->getVariable();
-
-                    if (isset($variable) && $variable->hasDefaultValue()) {
+                    if ($variable->hasDefaultValue()) {
                         $variables[$variable->getName()] = $variable->getDefaultValue()->getValue();
-
                         continue;
                     }
-
-                    throw new InvalidRequestException(\sprintf("Variable %s hasn't been submitted", $ref->getName()), $ref->getLocation());
+                    throw new InvalidRequestException(sprintf("Variable %s hasn't been submitted", $ref->getName()), $ref->getLocation());
                 }
             }
 
